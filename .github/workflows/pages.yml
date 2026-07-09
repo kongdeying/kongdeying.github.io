@@ -6,8 +6,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -19,9 +24,11 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     permissions:
       pages: write
       id-token: write
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/deploy-pages@v4
