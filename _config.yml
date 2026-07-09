@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 孔德营的部落格
+title: 孔校长的Blog
 subtitle: 记录 coding 与生活
 description: 随便写点
-keywords:
-author: KongDeying
+keywords: 孔校长
+author: 孔校长
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://kongdeying.github.io
-permalink: :year/:month/:day/:title/
+permalink: :title/  # 默认值 :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -25,7 +25,7 @@ source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
-category_dir: categories
+category_dir: topic  # 默认值 categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -67,6 +67,9 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  计算机: cst
+  英语: en
+  随笔: diary
 tag_map:
 
 # Metadata elements
@@ -96,7 +99,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly  # 默认值 landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
