@@ -56,8 +56,9 @@ social:
 
 favicon: /img/favicon.png
 
+# 头像
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/kong-avatar.png
   effect: false
 
 # Disable all banner images
@@ -66,8 +67,8 @@ disable_top_img: false
 # If the banner of page not setting, it will show the default_top_img
 default_top_img:
 
-# The banner image of index page
-index_img: /img/index.jpg
+# 首页banner  The banner image of index page
+index_img: /img/index_img.jpg
 
 # The banner image of archive page
 archive_img:
