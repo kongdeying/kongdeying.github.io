@@ -118,6 +118,8 @@ sudo rm /etc/apt/keyrings/docker.asc
 
 ## 2.3 Docker 服务命令
 
+Docker Engine 安装后，可使用下列命令对服务进行管理。
+
 ```sh
 systemctl status docker  # 查看 docker 服务状态
 systemctl start docker  # 启动 docker 服务
@@ -125,8 +127,6 @@ systemctl stop docker  # 停止 docker 服务
 systemctl restart docker  # 重启 docker 服务
 systemctl enable docker  # 设置开机启动 docker 服务
 ```
-
-
 
 # 3 使用 Docker
 
