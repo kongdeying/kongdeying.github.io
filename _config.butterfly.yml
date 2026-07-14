@@ -19,6 +19,9 @@ nav:
 
 menu:
   Home: / || fas fa-home
+  不是程序员:
+    Docker: /cst/docker-tutorial || fas fa-music
+  
   # Home: / || fas fa-home
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
@@ -261,7 +264,7 @@ footer:
   nav:
   owner:
     enable: true
-    since: 2025
+    since: 2026
   # Copyright of theme and framework
   copyright:
     enable: true
