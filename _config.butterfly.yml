@@ -20,7 +20,9 @@ nav:
 menu:
   首页: / || fas fa-home
   不是程序员|| fa fa-book: 
-    Docker: /cst/docker-tutorial
+    Docker 入坑指南: /cst/docker-tutorial
+    Docker 操作手册: /cst/docker-manual
+    Linux 操作手册: /cst/linux-manual
   
   # Home: / || fas fa-home
   # List||fas fa-list:

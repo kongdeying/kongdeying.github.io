@@ -1,4 +1,4 @@
-# my-blog
+# kongdeying.github.io
 
 #### 介绍
 一个记录工作和学习中所学习新知识的 Blog。
