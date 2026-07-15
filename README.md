@@ -16,12 +16,21 @@
 #### 使用说明
 
 ```shell
-hexo n --path about/me "标题"    # 创建 source/_posts/about/me.md
-hexo g           # generate
-hexo s           # server，本地预览
-hexo d           # deploy
-hexo clean       # 清缓存，诡异 bug 先跑这个
-hexo g -d        # 生成 + 部署 二合一
+hexo new "new post title"                # 创建新帖子
+hexo n --path about/me "new post title"  # 创建新帖子 source/_posts/about/me.md
+
+hexo generate  # 生成静态文件
+hexo g         # 生成静态文件
+
+hexo server    # 启动本地服务
+hexo s         # 启动本地服务
+
+hexo deploy    # 部署发布
+hexo d         # 部署发布
+
+hexo g -d      # 生成 + 部署 二合一
+
+hexo clean     # 清缓存，诡异 bug 先跑这个
 ```
 
 #### 参与贡献

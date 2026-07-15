@@ -1,5 +1,5 @@
 ---
-title: Docker 学习指南
+title: Docker 入坑指南
 date: 2026-07-11 14:48:08
 categories:
   - 计算机
@@ -211,7 +211,7 @@ docker import  # 导入容器
 
 # 4 服务编排
 
-使用Docker Compose，可以用一个 YAML 文件定义一组要启动的容器，以及容器运行时的属性，Docker Compose 称这些容器为“服务”。
+Docker Compose 是一个用于定义和运行多容器 Docker 应用的工具。使用Docker Compose，可以用一个 YAML 文件定义一组要启动的容器，以及容器运行时的属性，Docker Compose 称这些容器为“服务”。
 
 ## 4.1 安装 Docker Compose
 
@@ -228,7 +228,7 @@ docker compose version
 Compose 使用的三个步骤：
 
 - 使用 Dockerfile 定义应用程序的环境。
-- 使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。rm
+- 使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。
 - 最后，执行 docker-compose up 命令来启动并运行整个应用程序。
 
 ```sh
@@ -240,3 +240,38 @@ sudo docker compose rm  # 删除服务
 ```
 
 > Docker Compose V1 是独立由 Python 写的二进制，已被标记为 deprecated（废弃），2023 年起官方不再维护，其命令格式为 `docker-compose`。Docker Compose V2 作为 Docker CLI 的插件分发，使用 Go 重写，当前主流默认，Docker Desktop 自带，其命令格式为 `docker compose`。
+
+## 4.3 Docker Compose 配置文件
+
+默认情况下，Docker Compose 配置文件的名称为 *docker-compose.yml* 或 *docker-compose.yaml*。
+
+Docker Compose 配置文件主要由以下几个部分组成：
+
+- **version**: 指定 Compose 文件的版本。当前最新版本为 3.x。
+- **services**: 定义应用程序的各个服务。
+- **networks**: 定义服务之间的网络连接。
+
+ 服务的主要配置：
+
+- **image**: 指定要使用的 Docker 镜像。
+- **build**: 指定 Dockerfile 所在的目录，用于构建镜像。
+- **ports**: 映射容器端口到主机端口。
+- **volumes**: 挂载主机目录或数据卷到容器。
+- **environment**: 设置环境变量。
+
+示例：
+
+```yaml
+services:
+ web:
+   image: nginx
+   ports:
+     - "80:80"
+ db:
+   image: postgres
+   environment:
+     POSTGRES_PASSWORD: example
+   volumes:
+     - dbdata:/var/lib/postgresql/data
+```
+

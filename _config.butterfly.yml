@@ -18,9 +18,9 @@ nav:
   fixed: false
 
 menu:
-  Home: / || fas fa-home
-  不是程序员:
-    Docker: /cst/docker-tutorial || fas fa-music
+  首页: / || fas fa-home
+  不是程序员|| fa fa-book: 
+    Docker: /cst/docker-tutorial
   
   # Home: / || fas fa-home
   # List||fas fa-list:
@@ -198,8 +198,8 @@ index_post_content:
 toc:
   post: true
   page: false
-  number: true
-  expand: false
+  number: false  # 目录大纲编号，默认值 true
+  expand: true  # 是否展开，默认值 false
   # Only for post
   style_simple: false
   scroll_percent: true
