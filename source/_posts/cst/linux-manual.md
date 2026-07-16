@@ -87,3 +87,50 @@ sudo apt install fail2ban
 
 启用登录审计功能可以帮助您监控谁何时登录了服务器。您可以查看 `/var/log/auth.log` 文件来查看登录活动。
 
+# 2 ifconfig 命令
+
+安装 Ubuntu 24.04 后，默认情况下无法使用 ifconfig 命令，需要安装 net-tools 工具。
+
+```sh
+sudo apt update
+sudo apt install net-tools
+```
+
+ifconfig（network interfaces configuring）用于显示或配置网络设备的参数信息。
+
+```sh
+ifconfig  # 显示激活状态（up 状态）的网卡信息
+```
+
+以 eth0 为例，其网卡信息含义如下所示：
+
+| 名称         | 含义                                                         |
+| ------------ | ------------------------------------------------------------ |
+| eth0         | 网卡名称                                                     |
+| Link encap   | 网卡连接类型                                                 |
+| HWaddr       | 网卡 MAC 地址                                                |
+| inet addr    | IPv4 的 IP 地址                                              |
+| Bcast        | 广播地址                                                     |
+| Mask         | 子网掩码 |
+| inet6 addr   | IPv6 的 IP 地址                                              |
+| Scope        | IPv6 的域范围                                                |
+| UP           | 表示网卡已经启用                                             |
+| BROADCAST    | 表示主机支持广播                                             |
+| RUNNING      | 表示网卡正在运行中                                           |
+| MULTICAST    | 表示主机支持多播                                             |
+| MTU          | 最大传输单元 |
+| Metric       | 表示接口度量值                                               |
+| RX  packets: | 接收的数据包数                                               |
+| errors:      | 接收时错误的数据包数                                         |
+| dropped      | 接收时丢弃的数据包数                                         |
+| overruns:    | 接收时由于 buffer 溢出而丢弃的数据包数                       |
+| frame:       | 接收时由于 frame 错位而丢弃的数据包数                        |
+| TX packets   | 发送的数据包数                                               |
+| errors:      | 发送时错误的数据包数                                         |
+| dropped:     | 发送时丢弃的数据包数 |
+| overruns:    | 发送时由于 buffer 溢出而丢弃的数据包数                       |
+| carrier:     | 发送时由于 carrier 错误而丢弃的数据包数                      |
+| collisions:  | 表示冲突信息的数据包数目                                     |
+| txqueuelen:  | 表示网卡设置传输队列的大小                                   |
+| RX bytes:    | 接收的数据包字节数|
+| TX bytes:    | 发送的数据包字节数                                           |
